@@ -1,5 +1,4 @@
 
-
 msg = 'Введите начальные данные:\n'
 
 while True:
@@ -13,7 +12,14 @@ while True:
         else:
             break
 
-if x1<x2 and v1>v2 or x1>x2 and v2>v1:
-    print('YES')
+if v2 != v1:
+    n = (x1 - x2)/(v2 - v1)
+    if n >= 0 and n.is_integer():
+        print('YES')
+    else:
+        print('NO')
 else:
-    print('NO')
+    if x1 == x2:
+        print('YES')
+    else:
+        print('NO')
